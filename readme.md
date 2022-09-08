@@ -49,7 +49,7 @@ The assembly is minified and the filenames include hashes.
 After running the command `npm run start:server` (or `npm run start` to run two applications in parallel), the server is available at [http://localhost:3001](http://localhost:3001).
 
 ---
-### Структуры данных
+### Data Structures
 
 #### Quest
 
