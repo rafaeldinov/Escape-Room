@@ -1,45 +1,54 @@
-Имя студента: 
-Время затраченное на разработку проекта:
+# Escape Room: training project
 
-## Скрипты
+## Description:<br>
+Escape Room is a website of a company that organizes game quests of various themes and difficulty levels.
 
-В проекте, можно использовать следующие скрипты
+On the site you can find an interesting quest on your favorite topic and learn all the details about it.
+
+---
+In this project, I implemented the client side of the business logic. Also made the transition from JS to TypeScript.
+
+---
+## Scripts
+
+Possible scripts can be used in the project
 
 ### `npm run start:eslint`
 
-Запускает проверку прохождения проекта на eslint.
+Starts checking the progress of the project on eslint.
 
-Если есть ошибки или предупреждения, они выведутся в консоли после завершения выполнения команды.
+If there are errors or warnings, they will be printed to the console after the command completes.
 
 ### `npm run start:client`
 
-Запускает **клиентскую** часть приложение в режиме разработки.
+Starts the **client** part of the application in development mode.
 
-Откройте [http://localhost:3000](http://localhost:3000) чтобы просмотреть его в браузере.
+Open [http://localhost:3000](http://localhost:3000) to view it in a browser.
 
-Страница перезагрузится, если вы внесете правки.
+The page will reload if you make changes.
 
-Вы также увидите любые ошибки линтера в консоли.
+You will also see any linter errors in the console.
 
 ### `npm run start:server`
 
-Запускает **серверную** часть приложения, с которой можно получить данные для разработки клиентского приложения. Доступно на [http://localhost:3001](http://localhost:3001)
+Starts the **server** part of the application, from which you can get data for developing a client application. Available at [http://localhost:3001](http://localhost:3001)
 
 ### `npm run start`
 
-Запускает клиентскую и серверную часть приложения в *одной* консоли, параллельно.
+Runs the client and server parts of the application in the *same* console, in parallel.
 
 ### `npm run build`
 
-Собирает **клиентскую** часть приложение в папку `build`.
+Builds the **client** part of the application into the `build` folder.
 
-Сборка минифицирована, а имена файлов включают хеши.
+The assembly is minified and the filenames include hashes.
 
+---
+## Server
 
-## Сервер
+After running the command `npm run start:server` (or `npm run start` to run two applications in parallel), the server is available at [http://localhost:3001](http://localhost:3001).
 
-После запуска команды `npm run start:server` (или `npm run start` для запуска двух приложений параллельно), сервер доступн по пути [http://localhost:3001](http://localhost:3001).
-
+---
 ### Структуры данных
 
 #### Quest
@@ -47,10 +56,10 @@
 ```json
 {
   "id": 1,
-  "title": "Склеп",
-  "description": "Средневековое кладбище таит в себе много страшных тайн. Местные жители говорят, что в склепе похоронен граф вампир, который по ночам выходит на охоту, чтобы испить человеческой крови. Через час солнце опустится за горизонт, успеете ли вы убить вампира и выбраться из склепа?",
-  "previewImg": "img/preview-sklep.jpg",
-  "coverImg": "img/cover-sklep.jpg",
+  "title": "Crypt",
+  "description": "The medieval cemetery is fraught with many terrible secrets. Locals say that a vampire count is buried in the crypt, who goes hunting at night to drink human blood. In an hour the sun will drop below the horizon, will you have time to kill the vampire and get out of the crypt?",
+  "previewImg": "img/preview-crypt.jpg",
+  "coverImg": "img/cover-crypt.jpg",
   "type": "horror",
   "level": "hard",
   "peopleCount": [2, 5],
@@ -71,8 +80,8 @@
 
 ### Список роутов:
 
-- **GET** /quests — получить список квестов.
+- **GET** /quests — get list of quests.
 
-- **GET** http://localhost:3001/quests/1 — получить квест c идентификатором `id`.
+- **GET** http://localhost:3001/quests/1 — get quest with id `id`.
 
-- **POST** http://localhost:3001/orders — отправить новый заказ.
+- **POST** http://localhost:3001/orders — send a new order.
